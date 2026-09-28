@@ -1,0 +1,35 @@
+{
+  "name": "auth-session",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "format": "prettier --write src/**/*.js",
+    "lint": "eslint src/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vovklera/auth-session.git"
+  },
+  "keywords": [],
+  "author": "Vovk Valeriia <vovkvaleria06@gmail.com>",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/vovklera/auth-session/issues"
+  },
+  "homepage": "https://github.com/vovklera/auth-session#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.9"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
