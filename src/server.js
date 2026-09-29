@@ -5,6 +5,8 @@ import 'dotenv/config';
 import { logger } from './middleware/logger.js';
 import { connectMongoDB } from './db/connectMongoDB.js';
 
+import authRoutes from './routers/authRoutes.js';
+
 import { errorHandler } from './middleware/errorHandler.js';
 import { notFoundHandler } from './middleware/notFoundHandler.js';
 
@@ -15,11 +17,13 @@ app.use(logger);
 app.use(express.json());
 app.use(cors());
 
+app.use(authRoutes);
+
 app.use(notFoundHandler);
 app.use(errorHandler);
 
 await connectMongoDB();
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT} 🎆`);
 });

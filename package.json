@@ -31,9 +31,12 @@
     "prettier": "^3.9.9"
   },
   "dependencies": {
+    "celebrate": "^16.0.0",
     "cors": "^2.8.6",
+    "crypto": "^1.0.1",
     "dotenv": "^18.0.4",
     "express": "^5.2.1",
+    "http-errors": "^2.0.1",
     "mongodb": "^7.7.0",
     "mongoose": "^9.10.2",
     "pino-http": "^11.0.0"
