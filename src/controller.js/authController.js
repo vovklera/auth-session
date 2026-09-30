@@ -50,3 +50,17 @@ export const loginUser = async (req, res) => {
 
   res.status(200).json(user);
 };
+
+export const logoutUser = async (req, res) => {
+  const { sessionId } = req.body;
+
+  if (sessionId) {
+    await Session.deleteOne({ _id: sessionId });
+  }
+
+  res.clearCookie('sesionId');
+  res.clearCookie('accessToken');
+  res.clearCookie('refreshToken');
+
+  res.status(204).send();
+};
