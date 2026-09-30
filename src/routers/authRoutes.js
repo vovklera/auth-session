@@ -9,6 +9,7 @@ import {
   registerUser,
   loginUser,
   logoutUser,
+  refreshUserSession,
 } from '../controller.js/authController.js';
 
 const route = Router();
@@ -16,5 +17,7 @@ const route = Router();
 route.post('/auth/register', celebrate(registerUserShema), registerUser);
 route.post('/auth/login', celebrate(loginUserShema), loginUser);
 route.post('/auth/logout', logoutUser);
+
+route.post('/auth/refresh', refreshUserSession);
 
 export default route;
