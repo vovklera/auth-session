@@ -18,7 +18,7 @@ const sessionSchema = new Schema(
       type: Date,
       required: true,
     },
-    acrefreshTokenValidUntil: {
+    refreshTokenValidUntil: {
       type: Date,
       required: true,
     },
